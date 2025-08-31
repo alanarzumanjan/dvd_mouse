@@ -30,7 +30,6 @@ def main():
     mw.minimize_all_windows_cross_platform(prefer="show_desktop")
 
     # Go to start position
-
     pg.moveTo(x, y)
 
     try:
@@ -39,7 +38,7 @@ def main():
             nx = x + dx
             ny = y + dy
 
-            # Отражения от стен
+            # Reflections from walls
             if nx <= MARGIN:
                 nx = MARGIN
                 dx = -dx
