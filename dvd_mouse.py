@@ -7,7 +7,7 @@ import sys
 import minimize_windows as mw
 
 # --- Setttings ---
-SPEED_PX_PER_STEP = 140
+SPEED_PX_PER_STEP = 30
 TICK_SEC = 0.001
 MARGIN = 5
 TOLERANCE = 3
@@ -26,10 +26,10 @@ def main():
     dx = r.choice([-1, 1]) * SPEED_PX_PER_STEP
     dy = r.choice([-1, 1]) * SPEED_PX_PER_STEP
 
-    # Close all windows to look  beautifull wallpaper
+    # close all windows to look  beautifull wallpaper
     mw.minimize_all_windows_cross_platform(prefer="show_desktop")
 
-    # Go to start position
+    # go to start position
     pg.moveTo(x, y)
 
     try:
@@ -38,7 +38,7 @@ def main():
             nx = x + dx
             ny = y + dy
 
-            # Reflections from walls
+            # reflections from walls
             if nx <= MARGIN:
                 nx = MARGIN
                 dx = -dx
@@ -55,11 +55,11 @@ def main():
                 ny = screen_h - MARGIN
                 dy = -dy
 
-            # Go to new position
+            # go to new position
             pg.moveTo(nx, ny, duration=0)
             t.sleep(TICK_SEC)
 
-            # Check mouse don't given
+            # check mouse don't given
             cx, cy = pg.position()
             if abs(cx - nx) > TOLERANCE or abs(cy - ny) > TOLERANCE:
                 print("Mouse usebale. Exit...")
