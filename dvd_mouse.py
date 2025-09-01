@@ -26,7 +26,7 @@ def main():
     dx = r.choice([-1, 1]) * SPEED_PX_PER_STEP
     dy = r.choice([-1, 1]) * SPEED_PX_PER_STEP
 
-    # close all windows to look  beautifull wallpaper
+    # close all windows to look beautifull wallpaper
     mw.minimize_all_windows_cross_platform(prefer="show_desktop")
 
     # go to start position
