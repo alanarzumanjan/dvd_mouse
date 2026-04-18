@@ -6,7 +6,7 @@ Optional: minimize all windows on start (best-effort across Windows/macOS/Linux)
 
 ---
 
-✨ Features
+Features
 
 - Diagonal “DVD” movement with edge bounces.
 
@@ -65,7 +65,7 @@ Linux: for the “show desktop” action under X11 you may also want `xdotool`:
 sudo apt install xdotool
 ```
 
-## ▶️ Run program
+## Run program
 
 ```bash
     python dvd_mouse.py
